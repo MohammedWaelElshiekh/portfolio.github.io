@@ -329,6 +329,9 @@ header .dropdown-toggle::after {
     width: 270px;
     height: 270px;
   }
+  .mywork .contents .project:hover div {
+    transform: translateY(-270px);
+  }
 }
 @media (min-width: 1400px) {
 }

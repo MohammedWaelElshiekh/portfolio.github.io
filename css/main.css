@@ -17,6 +17,8 @@ html {
 }
 body {
   height: 1000vh;
+  width: 100%;
+  overflow-x:hidden ;
 }
 /* Start Header Section */
 
@@ -76,9 +78,9 @@ header .dropdown-toggle::after {
 }
 .achievments .icons {
   position: absolute;
-  font-size: 100px !important;
+  font-size: 50px !important;
   color: #000000b2;
-  top: -100px;
+  top: -50px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -97,7 +99,7 @@ header .dropdown-toggle::after {
 }
 /* -------------------------------------------- */
 /* Starting Features Section */
-.features{
+.features {
   background: url("../img//parallax.jpg");
   background-size: 100% 100%;
 }
@@ -241,9 +243,15 @@ header .dropdown-toggle::after {
 /* Responsive Section */
 
 @media (min-width: 576px) {
+  /* landing */
   .landing h1 {
-  font-size: 5rem;
-}
+    font-size: 5rem;
+  }
+  /* about */
+  .achievments .icons{
+    font-size: 100px !important;
+    top: -100px !important;
+  }
   /* features */
   .features .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -263,7 +271,6 @@ header .dropdown-toggle::after {
   }
 }
 @media (min-width: 768px) {
-
   /* features */
   .features .grid {
     gap: 50px;
@@ -282,9 +289,9 @@ header .dropdown-toggle::after {
   }
 }
 @media (min-width: 992px) {
-    /* landing */
-  .landing{
-    background: url("../img//bg.jpg") ;
+  /* landing */
+  .landing {
+    background: url("../img//bg.jpg");
     background-size: cover;
   }
   /* About section */
@@ -323,7 +330,6 @@ header .dropdown-toggle::after {
   /* My Work Section */
   .mywork .contents {
     grid-template-columns: repeat(4, 1fr);
-    
   }
   .mywork .contents .project {
     width: 270px;

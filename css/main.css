@@ -22,13 +22,13 @@ body {
 
 /* The Landing or the header section */
 .landing {
-  background-image: url("../img/bg.jpg");
+  background-image: url("../img/bg-small.jpg");
   background-size: cover;
   height: 100vh;
   font-family: "Bricolage Grotesque", sans-serif;
 }
 .landing h1 {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 header .dropdown-menu {
   border-radius: 0;
@@ -97,6 +97,10 @@ header .dropdown-toggle::after {
 }
 /* -------------------------------------------- */
 /* Starting Features Section */
+.features{
+  background: url("../img//parallax.jpg");
+  background-size: 100% 100%;
+}
 .features h3 {
   overflow: hidden;
 }
@@ -237,10 +241,9 @@ header .dropdown-toggle::after {
 /* Responsive Section */
 
 @media (min-width: 576px) {
-  /* the header */
-  /* .landing h1 {
-  font-size: 2rem;
-} */
+  .landing h1 {
+  font-size: 5rem;
+}
   /* features */
   .features .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -260,6 +263,7 @@ header .dropdown-toggle::after {
   }
 }
 @media (min-width: 768px) {
+
   /* features */
   .features .grid {
     gap: 50px;
@@ -278,6 +282,11 @@ header .dropdown-toggle::after {
   }
 }
 @media (min-width: 992px) {
+    /* landing */
+  .landing{
+    background: url("../img//bg.jpg") ;
+    background-size: cover;
+  }
   /* About section */
   .about .first {
     grid-template-columns: 1fr 1fr;
@@ -314,6 +323,11 @@ header .dropdown-toggle::after {
   /* My Work Section */
   .mywork .contents {
     grid-template-columns: repeat(4, 1fr);
+    
+  }
+  .mywork .contents .project {
+    width: 270px;
+    height: 270px;
   }
 }
 @media (min-width: 1400px) {

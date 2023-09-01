@@ -1,0 +1,320 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,700&family=Open+Sans&family=Poppins:wght@400;600&family=Roboto+Condensed:wght@400;700&display=swap");
+/* Global variables */
+:root {
+}
+
+/* Global definitions */
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  height: 1000vh;
+}
+/* Start Header Section */
+
+/* The Landing or the header section */
+.landing {
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  height: 100vh;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+.landing h1 {
+  font-size: 5rem;
+}
+header .dropdown-menu {
+  border-radius: 0;
+  top: 80px !important;
+  padding: 0;
+}
+header .dropdown-menu li a {
+  padding: 10px;
+  width: 300px;
+  border-bottom: 1px solid gray;
+}
+header .dropdown-menu li:last-child a {
+  border: none;
+}
+header .dropdown-toggle::after {
+  display: none;
+}
+.goDown {
+  border-radius: 50%;
+  border: 2px solid white;
+  box-sizing: content-box;
+  width: 50px;
+  height: 50px;
+  top: 80%;
+  left: 50%;
+  transition: 1s all;
+  transform: translateX(50%);
+}
+.goDown:hover i {
+  color: blue;
+}
+
+/* starting about section */
+.about .container {
+  padding-top: 100px;
+}
+.about {
+  font-family: "Poppins", sans-serif;
+}
+.achievments .box {
+  padding: 0;
+  margin-left: 5px;
+  margin-right: 5px;
+  position: relative;
+}
+.achievments .icons {
+  position: absolute;
+  font-size: 100px !important;
+  color: #000000b2;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about .progress {
+  width: 100%;
+}
+.about .progress-bar {
+  width: 0%;
+}
+.about .first {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.about .last {
+  margin-top: 100px;
+}
+/* -------------------------------------------- */
+/* Starting Features Section */
+.features h3 {
+  overflow: hidden;
+}
+.features h3::after,
+.features h3::before {
+  content: "";
+  width: 35%;
+  background-color: white;
+  height: 1px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+.features h3::after {
+  left: 15px;
+  margin-right: -35%;
+}
+.features h3::before {
+  right: 15px;
+  margin-left: -35%;
+}
+.features .feature {
+  border: 1px solid white;
+  padding: 5px 25px;
+  text-align: center;
+  height: 260px;
+  width: 260px;
+  transition: box-shadow 0.5s ease-out, transform 0.5s ease-out;
+  border-radius: 50%;
+}
+.features .feature:hover {
+  box-shadow: 0 0 15px white;
+  transform: scale(1.05);
+}
+.features .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 30px;
+}
+
+/* --------------------------------------------- */
+/* starting my work section */
+
+.mywork h3::after,
+.mywork h3::before {
+  content: "";
+  width: 35%;
+  background-color: black;
+  height: 2px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+.mywork h3::after {
+  left: 15px;
+  margin-right: -35%;
+}
+.mywork h3::before {
+  right: 15px;
+  margin-left: -35%;
+}
+.mywork .sorts li button {
+  cursor: pointer;
+  margin-left: 10px;
+  transition: all 0.5s;
+  background: none;
+  border: none;
+}
+.mywork .container > ul li:first-child {
+  margin: 0;
+}
+.mywork .container ul button.active {
+  background: black;
+  padding: 0 10px;
+  transform: translateY(-5px);
+  border-radius: 12%;
+  box-shadow: 0 0 5px white inset, 0 0 5px black;
+  color: white;
+}
+.mywork .contents {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 0;
+}
+.mywork .contents .project {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  opacity: 0;
+  display: none;
+  transition: all 1s;
+}
+.mywork .contents .project.active {
+  animation: appear 1s linear 0 forwards;
+  animation-iteration-count: 1;
+  display: block;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+.mywork .contents .project:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
+}
+.mywork .contents .project:active {
+  transform: none;
+}
+.mywork .contents .project img {
+  width: 100%;
+  height: 100%;
+}
+.mywork .contents .project div {
+  position: absolute;
+  top: 100%;
+  padding: 15px;
+  color: white;
+  transition: 0.3s ease-out;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.mywork .contents .project:hover div {
+  transform: translateY(-300px);
+}
+
+/* ============================================ */
+/* Responsive Section */
+
+@media (min-width: 576px) {
+  /* the header */
+  /* .landing h1 {
+  font-size: 2rem;
+} */
+  /* features */
+  .features .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  /* My Work Section */
+  .mywork .contents {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .mywork .contents .project {
+    width: 260px;
+    height: 260px;
+  }
+  .mywork .contents .project:hover div {
+    transform: translateY(-260px);
+  }
+}
+@media (min-width: 768px) {
+  /* features */
+  .features .grid {
+    gap: 50px;
+  }
+  /* My Work Section */
+  .mywork .contents {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .mywork .contents .project {
+    width: 340px;
+    height: 340px;
+  }
+  .mywork .contents .project:hover div {
+    transform: translateY(-340px);
+  }
+}
+@media (min-width: 992px) {
+  /* About section */
+  .about .first {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+  /* features */
+  .features .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 200px 200px;
+    gap: 0 20px;
+  }
+  .features .grid > :first-child,
+  .features .grid > :last-child {
+    justify-self: flex-end !important;
+  }
+  .features .grid > :nth-child(3),
+  .features .grid > :nth-child(2) {
+    justify-self: flex-start !important;
+  }
+  /* My Work Section */
+  .mywork .contents {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .mywork .contents .project {
+    width: 300px;
+    height: 300px;
+  }
+  .mywork .contents .project:hover div {
+    transform: translateY(-300px);
+  }
+}
+@media (min-width: 1200px) {
+  /* My Work Section */
+  .mywork .contents {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1400px) {
+}
